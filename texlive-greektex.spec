@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/greek/greektex
+# catalog-date 2007-11-12 23:53:08 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-greektex
 Version:	20071112
 Release:	1
@@ -42,6 +48,7 @@ are also provided.
 %doc %{_texmfdistdir}/doc/latex/greektex/greektexdoc.pdf
 %doc %{_texmfdistdir}/doc/latex/greektex/greektexdoc.tex
 %doc %{_texmfdistdir}/doc/latex/greektex/ywcl.zip
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,3 +59,5 @@ are also provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
