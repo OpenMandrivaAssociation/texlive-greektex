@@ -1,12 +1,12 @@
-# revision 15878
+# revision 28327
 # category Package
 # catalog-ctan /fonts/greek/greektex
-# catalog-date 2007-11-12 23:53:08 +0100
+# catalog-date 2012-07-13 12:20:40 +0200
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-greektex
-Version:	20071112
-Release:	2
+Version:	20120713
+Release:	1
 Summary:	Fonts for typesetting Greek/English documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/greektex
@@ -34,11 +34,11 @@ are also provided.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/greektex/greektex.sty
-%doc %{_texmfdistdir}/doc/latex/greektex/README
-%doc %{_texmfdistdir}/doc/latex/greektex/gehyphw.gr
-%doc %{_texmfdistdir}/doc/latex/greektex/greektexdoc.pdf
-%doc %{_texmfdistdir}/doc/latex/greektex/greektexdoc.tex
-%doc %{_texmfdistdir}/doc/latex/greektex/ywcl.zip
+%doc %{_texmfdistdir}/doc/fonts/greektex/README
+%doc %{_texmfdistdir}/doc/fonts/greektex/gehyphw.gr
+%doc %{_texmfdistdir}/doc/fonts/greektex/greektexdoc.pdf
+%doc %{_texmfdistdir}/doc/fonts/greektex/greektexdoc.tex
+%doc %{_texmfdistdir}/doc/fonts/greektex/ywcl.zip
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,17 +49,3 @@ are also provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20071112-2
-+ Revision: 752432
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20071112-1
-+ Revision: 718582
-- texlive-greektex
-- texlive-greektex
-- texlive-greektex
-- texlive-greektex
-
