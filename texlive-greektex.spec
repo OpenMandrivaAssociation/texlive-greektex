@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-greektex
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Fonts for typesetting Greek/English documents
 Group:		Publishing
