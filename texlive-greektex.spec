@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-greektex
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	Fonts for typesetting Greek/English documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/greektex
