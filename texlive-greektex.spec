@@ -1,18 +1,12 @@
-# revision 28327
-# category Package
-# catalog-ctan /fonts/greek/greektex
-# catalog-date 2012-07-13 12:20:40 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-greektex
-Version:	20190228
+Version:	28327
 Release:	1
 Summary:	Fonts for typesetting Greek/English documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/greek/greektex
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/greektex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/greektex.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/greektex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/greektex.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ macros and Greek hyphenation patterns for the fonts' encoding
 are also provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +36,7 @@ are also provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
